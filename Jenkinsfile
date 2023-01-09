@@ -2,7 +2,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "Node19"}
+    tools {nodejs "NodeJS19"}
 
     stages {
         stage('Dependencies') {
