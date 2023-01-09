@@ -1,7 +1,7 @@
 {
    "lambdatest_auth": {
-      "username": "arturo.avendano",
-      "access_key": "hpsjaRlXmNgrJoYK6WvtYXNxNEjYZeRsA2u1q8ZcplYSZCYKNE"
+      "username": "${LT_USERNAME}",
+      "access_key": "${LT_ACCESS_KEY}"
    },
    "browsers": [
       {
