@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "User is ${LT_USERNAME}"
                 echo "Access key is ${LT_ACCESS_KEY}"
-                sh 'npm run cypress:lambda --env username=${LT_USERNAME},access_key=${LT_ACCESS_KEY}'
+                sh 'npm run cypress:lambda -- --env username=${LT_USERNAME},access_key=${LT_ACCESS_KEY}'
             }
         }
         stage('Deploy') {
