@@ -3,7 +3,9 @@ pipeline {
     agent any
 
     tools {nodejs "NodeJS19"}
-
+    environment {
+        LT_USERNAME     = credentials('lambdatest-username')
+        LT_ACCESS_KET = credentials('lambdatest-access-key')
     stages {
         stage('Dependencies') {
             steps {
