@@ -1,7 +1,7 @@
 {
    "lambdatest_auth": {
-      "username": credentials('lambdatest-username'),
-      "access_key": credentials('lambdatest-access-key')
+      "username": "$LT_USERNAME",
+      "access_key": "$LT_ACCESS_KEY"
    },
    "browsers": [
       {
