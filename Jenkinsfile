@@ -16,6 +16,8 @@ pipeline {
         }
         stage('e2e Tests') {
             steps {
+                echo "User is ${DB_ENGINE}"
+                echo "Access key is ${DISABLE_AUTH}"
                 sh 'npm run cypress:lambda'
             }
         }
