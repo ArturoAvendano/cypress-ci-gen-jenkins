@@ -6,6 +6,7 @@ pipeline {
     environment {
         LT_USERNAME     = credentials('lambdatest-username')
         LT_ACCESS_KET = credentials('lambdatest-access-key')
+    }
     stages {
         stage('Dependencies') {
             steps {
