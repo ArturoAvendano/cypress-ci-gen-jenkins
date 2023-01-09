@@ -5,7 +5,7 @@ pipeline {
     tools {nodejs "NodeJS19"}
     environment {
         LT_USERNAME     = credentials('lambdatest-username')
-        LT_ACCESS_KET = credentials('lambdatest-access-key')
+        LT_ACCESS_KEY = credentials('lambdatest-access-key')
     }
     stages {
         stage('Dependencies') {
@@ -16,8 +16,8 @@ pipeline {
         }
         stage('e2e Tests') {
             steps {
-                echo "User is ${DB_ENGINE}"
-                echo "Access key is ${DISABLE_AUTH}"
+                echo "User is ${LT_USERNAME}"
+                echo "Access key is ${LT_ACCESS_KEY}"
                 sh 'npm run cypress:lambda'
             }
         }
