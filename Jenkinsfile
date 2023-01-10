@@ -18,13 +18,11 @@ pipeline {
             steps {
                 script{
                     jsonfile = readJSON file: 'cypress.env.json'
-                    
                     jsonfile['username'] = "${CYPRESS_USERNAME}"
                     jsonfile['access_key'] = "${CYPRESS_ACCESS_KEY}"
                     writeJSON file: 'cypress.env.json', json: jsonfile
-                    cat 'cypress.env.json'
                       }
-                
+                sh 'cat cypress.env.json'
                 echo "User is ${CYPRESS_USERNAME}"
                 echo "Access key is ${CYPRESS_ACCESS_KEY}"
                 sh 'npm run cypress:lambda'
