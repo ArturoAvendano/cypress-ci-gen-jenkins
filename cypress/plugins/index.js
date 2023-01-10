@@ -14,4 +14,6 @@
 
 module.exports = (on, config) => {
   // configure plugins here
+  username = process.env.CYPRESS_USERNAME;
+  access_key = process.env.CYPRESS_ACCESS_KEY;
 }
