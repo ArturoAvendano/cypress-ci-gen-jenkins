@@ -3,10 +3,6 @@ pipeline {
     agent any
 
     tools {nodejs "NodeJS19"}
-    environment {
-        CYPRESS_USERNAME     = credentials('lambdatest-username')
-        CYPRESS_ACCESS_KEY = credentials('lambdatest-access-key')
-    }
     stages {
         stage('Dependencies') {
             steps {
