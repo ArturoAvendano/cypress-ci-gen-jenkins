@@ -13,10 +13,10 @@ pipeline {
         stage('e2e Tests') {
             steps {
                 script{
-                    jsonfile = readJSON file: 'lambdatest-config.json'
+                    jsonfile = readJSON file: "lambdatest-config.json"
                     jsonfile['username'] = LT_USERNAME
                     jsonfile['access_key'] = LT_ACCESS_KEY
-                    writeJSON file: 'lambdatest-config.json', json: jsonfile
+                    writeJSON file: "lambdatest-config.json", json: jsonfile
                     
                       }
                 sh 'lambdatest-config.json'
