@@ -23,8 +23,8 @@ pipeline {
                     writeJSON file: 'cypress.env.json', json: jsonfile
                       }
                 sh 'cat cypress.env.json'
-                echo "User is ${CYPRESS_USERNAME}"
-                echo "Access key is ${CYPRESS_ACCESS_KEY}"
+                echo "User is ${LT_USERNAME}"
+                echo "Access key is ${LT_ACCESS_KEY}"
                 sh 'npm run cypress:lambda'
             }
         }
