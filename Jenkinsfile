@@ -18,8 +18,8 @@ pipeline {
             steps {
                 script{
                     jsonfile = readJSON file: 'cypress.env.json'
-                    jsonfile['username'] = "${CYPRESS_USERNAME}"
-                    jsonfile['access_key'] = "${CYPRESS_ACCESS_KEY}"
+                    jsonfile['username'] = CYPRESS_USERNAME
+                    jsonfile['access_key'] = CYPRESS_ACCESS_KEY
                     writeJSON file: 'cypress.env.json', json: jsonfile
                       }
                 sh 'cat cypress.env.json'
