@@ -14,8 +14,10 @@ pipeline {
             steps {
                 script{
                     jsonfile = readJSON file: 'lambdatest-config.json'
-                    jsonfile['username'] = LT_USERNAME
-                    jsonfile['access_key'] = LT_ACCESS_KEY
+                    jsonfile['lambdatest_auth'] = 
+                    ['username': LT_USERNAME,
+                     'access_key': LT_ACCESS_KEY
+                    ]
                     writeJSON file: 'lambdatest-config.json', json: jsonfile
                     
                       }
