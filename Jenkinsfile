@@ -17,6 +17,7 @@ pipeline {
                     jsonfile['username'] = LT_USERNAME
                     jsonfile['access_key'] = LT_ACCESS_KEY
                     writeJSON file: 'lambdatest-config.json', json: jsonfile
+                    
                       }
                 sh 'lambdatest-config.json'
                 echo "User is ${LT_USERNAME}"
